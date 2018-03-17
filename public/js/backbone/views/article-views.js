@@ -7,4 +7,4 @@ Pulse.Views.Article = Backbone.View.extend({
 	}
 
 
-})
+});
