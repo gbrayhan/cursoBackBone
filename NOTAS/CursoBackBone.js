@@ -62,6 +62,24 @@ m= window.collections.articles.add({user:"Alex",title:"Cortana"})
 
 
 
+m= window.collections.articles.add({user:"Alex",title:"Cortana",tag: "Asistente Virtual",votes: "250", image: "/"}) // si no pongo alguno manda un error
+
+Aparece en la pantalla del servidor:
+
+articles::create { user: 'Siedrix',
+  title: 'Cortana',
+  tag: 'Asistente Virtual',
+  votes: 0,
+  image: '/img/img3.jpg',
+  id: 'a9b81490-2bf7-11e8-bb73-8d4a7a9f6fe3' }
+
+
+
+
+
+ 
+
+
 
 
 
