@@ -43,6 +43,23 @@ window.collections.articles
 
 window.collections.articles.first().toJSON() //Prueba funcionando
 
+------------------------------------------------------------------------
+
+v = new Puls3.Views.Article({model: window.collections.articles.first() })
+//Manda un debugger
+
+
+
+this.$el //elemento del dom que tendra la vista
+
+//el, eventos y render 3 cosas que tienen una vista
+
+m= window.collections.articles.add({user:"Alex",title:"Cortana"})
+
+
+//Template 
+//Underscore, Swig como se complia y como se renderea
+
 
 
 
