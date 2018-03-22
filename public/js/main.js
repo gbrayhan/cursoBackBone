@@ -1,6 +1,17 @@
 $(document).ready(function(){
 	console.log('main.js loaded');
 
+	window.ponyExpress = new PonyExpress({
+		io: window.location.origin
+
+	});
+
+	window.ponyExpress.bind('connect',function(){
+		window.plugs.article = new PonyExpress.BackbonePlug({
+			collection: window.collections.articles
+		});
+	});
+
 	window.views.app = new Puls3.Views.App($('body'));
 
 
@@ -12,7 +23,7 @@ $(document).ready(function(){
 		var view = new Puls3.Views.Article({model:miModelo});
 
 		view.render();
-		view.$el.appendTo('.posts');
+		view.$el.prependTo('.posts');
 
 	
 	});

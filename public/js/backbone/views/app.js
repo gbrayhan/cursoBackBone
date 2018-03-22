@@ -17,7 +17,15 @@ Puls3.Views.App = Backbone.View.extend({
 		var autor = $('input[name=autor]').val();
 		var tag = $('input[name=tag]').val();
 
-		window.collections.articles.add({"title": titulo});
+		var data = {
+			"title": titulo,
+			"image": "/img/img4.jpg",
+			"user" : autor,
+			"tag": tag,
+			"votes": 0
+		};
+		var model = new Puls3.Models.Article(data);
+		model.save();
 
 	}
 
